@@ -2,11 +2,11 @@
 
 | Precedence    | Operator type                 | Associativity     | Individual operators |
 | ------------- | -------------                 | ----------------- | -------------------- |
-| 19            | [Grouping]                    | n/a               | (...)                |
+| 19            | [Grouping]                    | n/a               | ( ... )              |
 | 18            | [Member Access]               | left‐to‐right     | ... **.** ...        |
 |               | Computed [Member Access]      | left‐to‐right     | ... [ ... ]          |
 |               | [new] (with argument list)    | n/a               | new ... ( ... )      |
-| 17            | [Function Call]               | left‐to‐right     | ...(...)             |
+| 17            | [Function Call]               | left‐to‐right     | ... ( ... )          |
 |               | [new] (without argument list) | right‐to‐left     | new ...              |
 | 16            | [Postfix Increment]           | n/a               | ... ++               | 
 |               | [Postfix Decrement]           | n/a               | ... ‐‐               | 
