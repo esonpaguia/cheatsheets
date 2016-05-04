@@ -122,6 +122,11 @@ git push --tags
 git tag
 ```
 
+## Rename a tag
+```
+git push origin <old-tag>:<new-tag> :<old-tag> && git tag -d <old-tag>
+```
+
 ## Show history
 ```
 git log --graph --oneline --decorate
