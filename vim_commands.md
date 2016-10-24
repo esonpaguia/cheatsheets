@@ -1,3 +1,5 @@
+# VIM commands
+
 - esc - normal mode
 - h - left
 - j - down
@@ -23,7 +25,7 @@
 
 ## Using a count for a motion
 - [number] + [motion]
-  - eg. ```3w - go to third word```
+  - exe. ```3w - go to third word```
 
 ## Using a count to delete more
 - [number] + [command]
