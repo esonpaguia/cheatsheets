@@ -131,3 +131,8 @@ git push origin <old-tag>:<new-tag> :<old-tag> && git tag -d <old-tag>
 ```
 git log --graph --oneline --decorate
 ```
+
+## Show files for specific commit
+```
+git diff-tree --no-commit-id --name-only -r [commit_id]
+```
