@@ -3,7 +3,8 @@
 ## Links
 - [How do I link my domain to GitHub Pages](https://www.namecheap.com/support/knowledgebase/article.aspx/9645/2208/how-do-i-link-my-domain-to-github-pages)
 
-## Create a CNAME file in your username.github.io
+## Create a CNAME file
+- The file must be located in the root directory of your username.github.io repository.
 - The file must only contain your bare domain name. Eg. esonpaguia.com
 
 ## Advanced DNS settings
