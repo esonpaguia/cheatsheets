@@ -136,3 +136,24 @@ git log --graph --oneline --decorate
 ```
 git diff-tree --no-commit-id --name-only -r [commit_id]
 ```
+
+## Apply changes from a branch to another branch
+  - Determine the commit ID
+  ```
+  git log --graph --oneline --decorate
+  ```
+  
+  - Checkout to the target branch
+  ```
+  git checkout 2017.09.dev
+  ```
+  
+  - Apply the changes
+  ```
+  git chery-pick [commit-id]
+  ```
+
+  - Push changes to remote
+  ```
+  git push
+  ```
