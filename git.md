@@ -142,12 +142,12 @@ git diff-tree --no-commit-id --name-only -r [commit_id]
   ```
   git log --graph --oneline --decorate
   ```
-  
+
   - Checkout to the target branch
   ```
   git checkout 2017.09.dev
   ```
-  
+
   - Apply the changes
   ```
   git chery-pick [commit-id]
@@ -157,3 +157,17 @@ git diff-tree --no-commit-id --name-only -r [commit_id]
   ```
   git push
   ```
+
+# Show files you added/modified in current branch
+```
+git log --pretty="%H" --author="Eson Paguia" | while read commit_hash; do git show --oneline --name-only $commit_hash | tail -n+2; done | sort | uniq
+
+audio/TM/AgentDisambig/en/configuredmenus/cspq_menu.wav
+audio/TM/AgentDisambig/fr/configuredmenus/cspq_menu.wav
+audio/TM/WGL/en/cspq_welcome.wav
+audio/TM/WGL/en/twone_welcome.wav
+audio/TM/WGL/fr/cspq_welcome.wav
+audio/TM/WGL/fr/twone_welcome.wav
+grammar/ClientMVNOVoiceStatic/main/koodo/postpaid/en/chargeForSS.gsl
+grammar/ClientMVNOVoiceStatic/main/koodo/postpaid/fr/chargeForSS.gsl
+```
