@@ -159,6 +159,21 @@ git diff-tree --no-commit-id --name-only -r [commit_id]
   ```
 
 # Show files you added/modified in current branch
+  - If you don't want to count the abbreviated hash characters
+  ```
+  git log --pretty="%H" --author="Eson Paguia" | while read commit_hash; do git show --oneline --name-only $commit_hash | tail -n+2; done | sort | uniq
+  ```
+
+  - If we want to count the abbreviated hash characters
+  ```
+  git log --author="Eson Paguia" --name-only --oneline | grep -v '^[a-f0-9]\{7\} ' | sort –u
+  ```
+
+  Note:
+  - It’s a good idea to add the --since=[date] option to further filter the files to recent commits only.
+  - Take note the abbreviated hash used in the header line is 7 characters. This vary and must be adjusted accordingly. If a file or directory name matches this pattern and the space following it (which is highly unlikely), then it would be incorrectly filtered out.
+
+# Clean stale remote branches
 ```
-git log --pretty="%H" --author="Eson Paguia" | while read commit_hash; do git show --oneline --name-only $commit_hash | tail -n+2; done | sort | uniq
+git remote prune origin
 ```
