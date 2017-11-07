@@ -164,7 +164,7 @@ git diff-tree --no-commit-id --name-only -r [commit_id]
   git log --pretty="%H" --author="Eson Paguia" | while read commit_hash; do git show --oneline --name-only $commit_hash | tail -n+2; done | sort | uniq
   ```
 
-  - If we want to count the abbreviated hash characters
+  - If you want to count the abbreviated hash characters
   ```
   git log --author="Eson Paguia" --name-only --oneline | grep -v '^[a-f0-9]\{7\} ' | sort –u
   ```
